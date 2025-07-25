@@ -1,11 +1,6 @@
 // src/components/vehicle/VehicleDetail.tsx
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "../../components/ui/card";
-import type { Telemetry } from "../../store/vehicleStore";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import type { Telemetry } from "@/store/vehicleStore";
 
 interface VehicleDetailProps {
   telemetry: Telemetry;

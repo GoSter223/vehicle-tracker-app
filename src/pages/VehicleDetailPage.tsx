@@ -1,10 +1,10 @@
 // src/pages/VehicleDetailPage.tsx
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useVehicleStore } from "../store/vehicleStore";
-import VehicleDetail from "../components/vehicle/VehicleDetail";
-import { Alert, AlertTitle, AlertDescription } from "../components/ui/alert";
-import { Button } from "../components/ui/button";
+import { useVehicleStore } from "@/store/vehicleStore";
+import VehicleDetail from "@/components/vehicle/VehicleDetail";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 
 const VehicleDetailPage = () => {
   const { id } = useParams<{ id: string }>();

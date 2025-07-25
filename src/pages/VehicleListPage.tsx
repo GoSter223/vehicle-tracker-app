@@ -1,8 +1,8 @@
 // src/pages/VehicleListPage.tsx
 import { useEffect } from "react";
-import { useVehicleStore } from "../store/vehicleStore";
-import VehicleCard from "../components/vehicle/VehicleCard";
-import { Alert, AlertTitle, AlertDescription } from "../components/ui/alert";
+import { useVehicleStore } from "@/store/vehicleStore";
+import VehicleCard from "@/components/vehicle/VehicleCard";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
 const VehicleListPage = () => {
   const { vehicles, loading, error, getVehicles } = useVehicleStore();

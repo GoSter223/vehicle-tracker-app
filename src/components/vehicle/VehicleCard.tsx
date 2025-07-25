@@ -5,9 +5,9 @@ import {
   CardTitle,
   CardContent,
   CardFooter,
-} from "../../components/ui/card";
-import { Button } from "../../components/ui/button";
-import type { Vehicle } from "../../store/vehicleStore";
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import type { Vehicle } from "@/store/vehicleStore";
 
 interface VehicleCardProps {
   vehicle: Vehicle;

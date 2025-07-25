@@ -1,8 +1,8 @@
 // src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layout";
-import VehicleListPage from "./pages/VehicleListPage";
-import VehicleDetailPage from "./pages/VehicleDetailPage";
+import Layout from "@/components/layout";
+import VehicleListPage from "@/pages/VehicleListPage";
+import VehicleDetailPage from "@/pages/VehicleDetailPage";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 // src/store/vehicleStore.ts
 import { create } from 'zustand';
-import { fetchVehicles, fetchVehicleById } from '../api/mockApi';
+import { fetchVehicles, fetchVehicleById } from '@/api/mockApi';
 
 // Definisikan tipe data
 export interface Vehicle {
