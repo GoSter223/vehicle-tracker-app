@@ -5,7 +5,7 @@ import {
   CardTitle,
   CardContent,
 } from "../../components/ui/card";
-import { Telemetry } from "../../store/vehicleStore";
+import type { Telemetry } from "../../store/vehicleStore";
 
 interface VehicleDetailProps {
   telemetry: Telemetry;

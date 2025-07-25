@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import { Vehicle } from "../../store/vehicleStore";
+import type { Vehicle } from "../../store/vehicleStore";
 
 interface VehicleCardProps {
   vehicle: Vehicle;
@@ -18,24 +18,24 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
   const lastUpdate = new Date(vehicle.updated_at).toLocaleString();
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{vehicle.name}</CardTitle>
+    <Card className="hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out border border-gray-200 rounded-2xl overflow-hidden">
+      <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-5">
+        <CardTitle className="text-xl">{vehicle.name}</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-2">
+      <CardContent className="p-5 space-y-2 text-gray-700">
         <p>
-          <strong>Status:</strong> {vehicle.status}
+          <span className="font-semibold">Status:</span> {vehicle.status}
         </p>
         <p>
-          <strong>Speed:</strong> {vehicle.speed} km/h
+          <span className="font-semibold">Speed:</span> {vehicle.speed} km/h
         </p>
-        <p>
-          <strong>Last Update:</strong> {lastUpdate}
-        </p>
+        <p className="text-sm text-gray-500">Last Update: {lastUpdate}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="p-5">
         <Link to={`/vehicles/${vehicle.id}`} className="w-full">
-          <Button className="w-full">Detail</Button>
+          <Button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl shadow-md transition">
+            View Details
+          </Button>
         </Link>
       </CardFooter>
     </Card>

@@ -12,12 +12,14 @@ const VehicleListPage = () => {
   }, [getVehicles]);
 
   if (loading) {
-    return <p>Loading vehicles...</p>;
+    return (
+      <p className="text-center text-lg animate-pulse">Loading vehicles...</p>
+    );
   }
 
   if (error) {
     return (
-      <Alert variant="destructive">
+      <Alert variant="destructive" className="max-w-md mx-auto mt-10">
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
@@ -25,9 +27,9 @@ const VehicleListPage = () => {
   }
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-6">Vehicle List</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-8 text-center">🚗 Vehicle List</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {vehicles.map((vehicle) => (
           <VehicleCard key={vehicle.id} vehicle={vehicle} />
         ))}
